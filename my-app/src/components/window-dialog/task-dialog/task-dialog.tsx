@@ -11,6 +11,10 @@ import {
 import { Separator } from "@radix-ui/react-separator";
 
 import { BiTask } from "react-icons/bi";
+import TaskName from "./sub-components/task-name";
+import TaskDescription from "./sub-components/task-description";
+import ProjectList from "./sub-components/project-list";
+import PriorityList from "./sub-components/priority-list";
 
 export default function TaskDialog() {
   return (
@@ -30,13 +34,25 @@ export default function TaskDialog() {
             </DialogDescription>
           </div>
           <div>
-            <Separator className="mt-4 left-0 absilute" />
+            <Separator className="mt-4 left-0 absolute" />
           </div>
         </DialogHeader>
-        <div className="grid grid-cols gap-6 mt-8">
+        <div className="grid grid-cols-2 gap-6 mt-8">
             <div className="flex flex-col gap-3">
-
+                <TaskName />
+                <TaskDescription />
             </div>
+            <div className="flex flex-col gap-[53px]">
+                <ProjectList />
+                <PriorityList />
+            </div>
+        </div>
+        <div>
+            <Separator className="mt-4 left-0 absolute" />
+        </div>
+        <div className="flex gap-1 justify-end mt-6">
+            <Button type="button" variant="secondary">Close</Button>
+            <Button className="ml-5 px-5">Add New Task</Button>
         </div>
       </DialogContent>
     </Dialog>

@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { MdOutlineSortByAlpha } from "react-icons/md";
 import { SortingDropDown } from "../../drop-downs/sorting-drop-down";
 
+import TaskDialog from "@/components/window-dialog/task-dialog/task-dialog";
+
 export default function ProjectsAreaHeader() {
   return (
     <div className="flex justify-between items-center">
@@ -14,7 +16,7 @@ export default function ProjectsAreaHeader() {
           <span className="text-gray-500 text-sm">Sort </span>
         </div>
         <SortingDropDown />
-        <Button className="rounded-3xl px-4">Add Task</Button>
+        <TaskDialog />
       </div>
     </div>
   );

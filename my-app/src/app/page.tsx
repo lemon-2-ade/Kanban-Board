@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 import NavBar from "@/components/nav-bar/nav-bar";
 import ProjectsArea from "@/components/projects-area/project-area";
-import RightSideBar from "@/components/right-side-bar/right-side-bar"
+import RightSideBar from "@/components/right-side-bar/right-side-bar";
 
 export default function Home() {
   const { theme } = useTheme();
